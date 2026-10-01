@@ -1,0 +1,7 @@
+/build/
+*.obj
+*.exe
+.vs/
+.vscode/
+.DS_Store
+Thumbs.db
