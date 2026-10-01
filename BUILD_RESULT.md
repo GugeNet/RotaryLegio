@@ -11,3 +11,7 @@ ARM GCC 10.2.1 compile/link succeeded without warnings.
 - Calibration/session tests and implementation are absent because that feature was removed.
 
 Hardware electrical endpoints, audition, stack usage and CPU profiling remain unverified. See README.md for the provisional fixed voltage conversion. This image has not been flashed by the agent.
+
+## RotaryLegio naming verification — 2026-10-01
+
+Renamed the source and build target to RotaryLegio and rebuilt successfully without warnings. The rebuilt RotaryLegio.bin is byte-for-byte identical to the original v1.5 image; the checksum and memory figures above are unchanged.

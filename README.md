@@ -41,25 +41,25 @@ Pitch controls rotation speed, not audio pitch, and is not a 1 V/octave control.
 
 ## Firmware installation
 
-The prebuilt image is [firmware/LegioRotary.bin](firmware/LegioRotary.bin). Connect the module by USB and enter its STM32 ROM DFU bootloader using the module's bootloader procedure. This image targets internal flash at `0x08000000`.
+The prebuilt image is [firmware/RotaryLegio.bin](firmware/RotaryLegio.bin). Connect the module by USB and enter its STM32 ROM DFU bootloader using the module's bootloader procedure. This image targets internal flash at `0x08000000`.
 
 With dfu-util on PATH, run from this repository:
 
 ```sh
-dfu-util -a 0 -s 0x08000000:leave -D firmware/LegioRotary.bin -d ,0483:df11
+dfu-util -a 0 -s 0x08000000:leave -D firmware/RotaryLegio.bin -d ,0483:df11
 ```
 
 Windows with the default Daisy toolchain installation:
 
 ```powershell
-& 'C:\Program Files\DaisyToolchain\bin\dfu-util.exe' -a 0 -s 0x08000000:leave -D firmware/LegioRotary.bin -d ',0483:df11'
+& 'C:\Program Files\DaisyToolchain\bin\dfu-util.exe' -a 0 -s 0x08000000:leave -D firmware/RotaryLegio.bin -d ',0483:df11'
 ```
 
 Restart normally after flashing if necessary. No calibration or special startup gesture is needed.
 
 ## Build from source
 
-The source and Makefile are unchanged from v1.5. Requirements: GNU Make, ARM embedded GCC, and libDaisy. The supplied image was built with ARM GCC 10.2.1 and libDaisy commit `facb66c76b5482918741695f4268b0185e474644`.
+The firmware behavior is unchanged from v1.5; the source filename and build target are now RotaryLegio. Requirements: GNU Make, ARM embedded GCC, and libDaisy. The supplied image was built with ARM GCC 10.2.1 and libDaisy commit `facb66c76b5482918741695f4268b0185e474644`.
 
 From this repository, create a sibling dependency checkout and build:
 
